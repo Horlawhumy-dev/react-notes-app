@@ -1,0 +1,25 @@
+// Spacing Between elements
+@mixin spaceBetween {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+@mixin flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin transition($scale) {
+    transform: scale($scale);
+    transition: transform 1s ease-out;
+}
+
+
+@mixin  grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+
+}
