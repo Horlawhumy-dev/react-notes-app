@@ -11,11 +11,12 @@ const NoteList = () => {
     useEffect(() => {
         const notesFromLocal = JSON.parse(localStorage.getItem('notes'))
         setNotes(notesFromLocal);
-    },[])
+    },[setNotes])
 
     useEffect(() => {
         localStorage.setItem('notes', JSON.stringify(notes))
     },[notes])
+
     const addNewNotes = (newNotes) => {
         const newNote = [...notes, newNotes];
         setNotes(newNote);

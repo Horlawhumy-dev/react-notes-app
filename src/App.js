@@ -8,8 +8,7 @@ const App = () => {
   const [showDarkMode, setShowDarkMode] = useState(false);
 
   const showDark = () =>{
-    setShowDarkMode(!showDarkMode)
-    console.log(showDarkMode)
+    setShowDarkMode(!showDarkMode);
   }
    return (
      <NoteProvider>
