@@ -1,5 +1,4 @@
-import React, {useContext} from 'react';
-// import {NoteContext} from './NoteContext'
+import React from 'react';
 import { MdDelete } from "react-icons/md";
 
 import '../dist/css/style.css'
@@ -7,14 +6,11 @@ import '../dist/css/style.css'
 
 const Note = ( { note, handleDeleteNote }) => {
 
-    // const [notes, setNotes] = useContext(NoteContext);
-
-   
     return (
       
         <div className='Note'>
             <div className="upper">
-                <h4>{note.text}</h4>
+                <p>{note.text}</p>
             </div>
             <div className="bottom">
                 <p>{note.date}</p>

@@ -10,8 +10,9 @@ const AddNote = ({addNewNote }) => {
     const totalText = noteText.toLowerCase().length;
 
     const handleChangeText = (e) => {
-        setNoteText(e.target.value)
-        
+        if(totalCharacters - e.target.value.length >= 0) {
+            setNoteText(e.target.value)
+        }
     }
 
     const handleNoteText = () => {
@@ -21,7 +22,7 @@ const AddNote = ({addNewNote }) => {
             date: currentDate.toLocaleDateString()
         }
 
-        if(noteText.length > 0 ){
+        if(noteText.trim().length > 0 ){
             // Adding user typed note
             addNewNote(newNote);
             setNoteText('')

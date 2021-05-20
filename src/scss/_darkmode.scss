@@ -1,0 +1,31 @@
+
+.dark-mode{
+    height: 600vh;
+    background-color: $secondary-color;
+    color: $tertiary-color;
+    margin-top: -1rem;
+    transition: all 1s ease-in-out;
+
+    .Header {
+        border-bottom: 2px solid $tertiary-color;
+    }
+
+    .SearchBar {
+        border: 1px solid $tertiary-color;
+
+        & .search-icon{
+            color: $tertiary-color;
+        }
+    }
+    .AddNote {
+        textarea{
+            background-color: transparent;
+            color: $tertiary-color;
+        }
+
+        .bottom {
+            color: $tertiary-color;
+        }
+    }
+  
+}

@@ -1,5 +1,10 @@
-@import 'config';
 @import 'variables';
+@import 'config';
+@import 'note';
+@import 'header';
+@import 'addnote';
+@import 'searchbar';
+@import 'darkmode';
 
 body{
     font-family: $font-stack;
@@ -16,157 +21,5 @@ body{
     @include grid;
 }
 
-.Note{
-    @include spaceBetween;
-    background-color: $primary-color;
-    box-shadow: 0px 2px 4px black;
-    color: $tertiary-color;
-    margin-bottom: 1rem;
-    margin-left: 1rem; 
-    margin-top: 1rem;
-    margin-right: 1rem;
-    border-radius: 10px;
-    min-height: 200px;
-    padding: 10px 20px;
-    
-    &:hover{
-        @include transition(.9);
-        cursor: pointer;
-    }
 
-    & h4{
-        text-align: justify;
-        text-transform: capitalize;
-    }
 
-    .bottom{
-        @include flexCenter;
-
-        & .delete-icon{
-            box-shadow: 0px 2px 2px black;
-            font-size: larger;
-            cursor: pointer;
-
-            &:hover{
-                
-                @include transition(1.1);
-            }
-        }
-    }
-}
-
-.AddNote{
-    @include spaceBetween;
-    box-shadow: 0px 2px 4px black;
-    color: $primary-color;
-    margin-bottom: 1rem;
-    margin-left: 1rem; 
-    margin-right: 1rem;
-    border-radius: 10px;
-    min-height: 200px;
-    padding: 10px 20px;
-
-    &:hover{
-        // @include transition(.9);
-        cursor: pointer;
-    }
-
-    & textarea{
-        padding: 5px;
-        color: $secondary-color;
-        border: none;
-        resize: none;
-        outline: none;
-        line-height: 1.2;
-        overflow: hidden;
-
-        &:focus{
-            border: 1px solid lightgrey
-        }
-    }
-
-   
-
-    .bottom{
-        @include flexCenter;
-    }
-
-    & button{
-        background-color: $primary-color;
-        color: $tertiary-color;
-        cursor: pointer;
-        padding: 10px;
-        border-radius: 5px;
-        border: none;
-        box-shadow: 0px 2px 4px black;
-    }
-}
-
-.SearchBar{
-    border-radius: 10px;
-    margin: 1rem;
-    background-color: $secondary-color;
-    color: $tertiary-color;
-    padding: 5px;
-
-    &.search-icon {
-        margin-top: 5px;
-    }
-
-    & input{
-        background-color: transparent;
-        width: 80%;
-        border: none;
-        outline: none;
-        padding: 5px;
-        color: $tertiary-color;
-
-    }
-}
-
-.Header{
-    @include flexCenter;
-    border-bottom: 2px solid $secondary-color;
-    margin: 1rem 1rem 2rem 1rem;
-    
-  
-    & button{
-        background-color: $secondary-color;
-        color: $tertiary-color;
-        border: none;
-        padding: 5px 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        
-        &:hover{
-            @include transition(.9);
-        }
-    }
-}
-
-.dark-mode{
-    height: 600vh;
-    background-color: $secondary-color;
-    color: $tertiary-color;
-    margin-top: -1rem;
-    transition: all 1s ease-in-out;
-
-    .Header {
-        border-bottom: 2px solid $tertiary-color;
-    }
-
-    .SearchBar {
-        border: 1px solid $tertiary-color;
-    }
-    .AddNote {
-        textarea{
-            background-color: transparent;
-            color: $tertiary-color;
-        }
-
-        .bottom {
-            color: $tertiary-color;
-        }
-    }
-  
-}

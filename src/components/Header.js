@@ -1,5 +1,8 @@
 import React from  'react';
-import {FaMoon} from 'react-icons/fa'
+import {FaMoon} from 'react-icons/fa';
+
+import '../dist/css/style.css';
+
 
 const  Header = ({ handleShowDarkMode }) => {
     return (

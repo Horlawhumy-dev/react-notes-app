@@ -1,0 +1,40 @@
+
+.Note{
+    @include spaceBetween;
+    background-color: $primary-color;
+    box-shadow: 0px 2px 4px black;
+    color: $tertiary-color;
+    margin-bottom: 1rem;
+    margin-left: 1rem; 
+    margin-top: 1rem;
+    margin-right: 1rem;
+    border-radius: 10px;
+    min-height: 200px;
+    padding: 10px 20px;
+    
+    &:hover{
+        @include transition(.9);
+        cursor: pointer;
+    }
+
+    & p{
+        word-break: break-all;
+        text-transform: capitalize;
+        white-space: pre-wrap;
+    }
+
+    .bottom{
+        @include flexCenter;
+
+        & .delete-icon{
+            box-shadow: 0px 2px 2px black;
+            font-size: larger;
+            cursor: pointer;
+
+            &:hover{
+                
+                @include transition(1.1);
+            }
+        }
+    }
+}
